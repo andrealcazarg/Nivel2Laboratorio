@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e62d7565-dc44-4a4b-90b0-149649a80e2b" name="Changes" comment="primer commit">
+    <list default="true" id="e62d7565-dc44-4a4b-90b0-149649a80e2b" name="Changes" comment="2do commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
@@ -51,7 +52,12 @@
       <updated>1667841123016</updated>
       <workItem from="1667841124125" duration="4895000" />
       <workItem from="1668367308951" duration="3000" />
-      <workItem from="1668367464794" duration="7839000" />
+      <workItem from="1668367464794" duration="7890000" />
+      <workItem from="1668451724580" duration="5664000" />
+      <workItem from="1668530907794" duration="2000" />
+      <workItem from="1668887375634" duration="2000" />
+      <workItem from="1668895915674" duration="2000" />
+      <workItem from="1668896152824" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="primer commit">
       <created>1667846030061</created>
@@ -60,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667846030061</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2do commit">
+      <created>1668375714534</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668375714534</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +93,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="primer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="primer commit" />
+    <MESSAGE value="2do commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2do commit" />
   </component>
 </project>

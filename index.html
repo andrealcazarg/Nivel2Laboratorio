@@ -15,29 +15,32 @@
                 Nombre
             </label>
             <input type="text" name="nombre" id="nombre" >
-            <label class="respuesta" id="label_respuesta">Rellene este campo</label>
-
+            <label class="respuesta" id="label_respuesta_nombre">Rellene este campo</label>
         </div>
         <div class="input">
             <label for="email">
                 Email
             </label>
             <input type="email" name="email" id="email">
-            <label class="respuesta">Rellene este campo</label>
+            <label class="respuesta" id="label_respuesta_email">Rellene este campo</label>
         </div>
         <div class="input">
             <label for="clave">
                 Clave
             </label>
             <input type="text" name="clave" id="clave">
-            <label class="respuesta">Rellene este campo</label>
+            <label class="respuesta" id="label_respuesta_clave">Rellene este campo</label>
+            <label class="respuesta" id="label_respuesta_clave_longitud">Debe tener al menos 8 caracteres</label>
+
         </div>
         <div class="input">
             <label for="confir_clave">
                 Confirma su clave
             </label>
             <input type="text" name="confir_clave" id="confir_clave">
-            <label class="respuesta">Rellene este campo</label>
+            <label class="respuesta" id="label_respuesta_confir_clave">Rellene este campo</label>
+            <label class="respuesta" id="label_respuesta_clave_no_coinciden">Las contraseñas no coinciden</label>
+
         </div>
         <button class="boton">Enviar</button>
     </form>
