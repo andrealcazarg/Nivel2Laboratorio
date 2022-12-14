@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e62d7565-dc44-4a4b-90b0-149649a80e2b" name="Changes" comment="2do commit">
+    <list default="true" id="e62d7565-dc44-4a4b-90b0-149649a80e2b" name="Changes" comment="3rd commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="2HED029uCScSU4hZC3dq5mZWNuA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -40,6 +42,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -58,6 +61,12 @@
       <workItem from="1668887375634" duration="2000" />
       <workItem from="1668895915674" duration="2000" />
       <workItem from="1668896152824" duration="1000" />
+      <workItem from="1668977763254" duration="33000" />
+      <workItem from="1669391207211" duration="4000" />
+      <workItem from="1669395096809" duration="3000" />
+      <workItem from="1669395861136" duration="5000" />
+      <workItem from="1669551890272" duration="19000" />
+      <workItem from="1671036124094" duration="11854000" />
     </task>
     <task id="LOCAL-00001" summary="primer commit">
       <created>1667846030061</created>
@@ -73,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668375714534</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="3rd commit">
+      <created>1668977780304</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668977780304</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +110,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="primer commit" />
     <MESSAGE value="2do commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="2do commit" />
+    <MESSAGE value="3rd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="3rd commit" />
   </component>
 </project>

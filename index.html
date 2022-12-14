@@ -9,7 +9,7 @@
 <body>
 <div class="formulario">
     <h1>Create Account</h1>
-    <form method="post" action="" id="formulario">
+    <form id="formulario">
         <div class="input">
             <label for="nombre">
                 Nombre
@@ -42,7 +42,7 @@
             <label class="respuesta" id="label_respuesta_clave_no_coinciden">Las contraseñas no coinciden</label>
 
         </div>
-        <button class="boton">Enviar</button>
+        <button class="boton" onsubmit="return validarFormulario(e)">Enviar</button>
     </form>
 
 </div>

@@ -2,113 +2,107 @@
         document.getElementById("formulario").addEventListener('submit', validarFormulario);
     });
 
+//Declaracion variables id input
+
+    var nombre = document.getElementById('nombre');
+    var email = document.getElementById('email');
+   // var clave = document.getElementById('clave');
+  //  var confir_clave = document.getElementById('confir_clave');
+    var inputs = document.getElementsByTagName('input');
+
+    var respuesta_nombre = document.getElementById('label_respuesta_nombre');
+    var respuesta_clave = document.getElementById('label_respuesta_clave');
+   // var respuesta_clave_longitud = document.getElementById('label_respuesta_clave_longitud');
+    var respuesta_confir_clave = document.getElementById('label_respuesta_confir_clave');
+  //  var respuesta_clave_no_coincide = document.getElementById('label_respuesta_clave_no_coinciden');
 
     function validarFormulario(evento) {
         evento.preventDefault();
-
-        //Declaracion variables id input
-        var nombre = document.getElementById('nombre');
-        var email = document.getElementById('email');
-        var clave = document.getElementById('clave');
-        var confir_clave = document.getElementById('confir_clave');
-
-        // for(var i = 0; i< respuesta.length; i++){
-        //     if (nombre.length == 0 || email.length == 0){
-        //         respuesta[i].style.display = 'block';
-        //     }
-        // }
         validarCamposVacios();
-
-        // var clave = document.getElementById('clave').value;
-        // if (clave.length < 8) {
-        //     alert('La clave no es válida');
-        //     return;
-        // }
     }
 
-/**
- * funcion utilizada para validar si el email es correcto con una expresion regular.
- * Se tienen en cuenta:
- * 1: Que empieze por el identificador o nombre del usuario ^\w+([.-_+]?\w+)*
- * 2: Esta seguido por el @
- * 3: Nombre dominio del correo (.com, .es) \w+([.-]?\w+)*(\.\w{2,10})+$
- * Por ejemplo:  andrea@gmail.com
- */
+    /**
+     * funcion utilizada para validar si el email es correcto con una expresion regular.
+     * Se tienen en cuenta:
+     * 1: Que empieze por el identificador o nombre del usuario ^\w+([.-_+]?\w+)*
+     * 2: Esta seguido por el @
+     * 3: Nombre dominio del correo (.com, .es) \w+([.-]?\w+)*(\.\w{2,10})+$
+     * Por ejemplo:  andrea@gmail.com
+     */
     function validarEmail() {
-    var respuesta_email = document.getElementById('label_respuesta_email');
-    var email = document.getElementById('email');
-    var email_valido = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-    if (email_valido.test(email)) {
-        //error vacio
-        email.style.backgroundImage = "url('images/error-icon.svg')";
-        email.style.backgroundRepeat = 'no-repeat';
-        email.style.backgroundPosition = 'right';
-        email.style.border = '3px solid red';
-       respuesta_email.style.display = 'block';
-        return;
-    } else {
-        email.style.backgroundImage = "url('images/success-icon.svg')";
-        email.style.backgroundRepeat = 'no-repeat';
-        email.style.backgroundPosition = 'right';
-        email.style.border = '3px solid green';
-        respuesta_email.style.display = 'none';
-    }
-        // if (email_valido.test(email)) {
-        //     alert('Email es valido.');
-        //     return true;
-        // } else {
-        //     alert('Email es invalido.');
-        //     return false;
-        // }
+        var respuesta_email = document.getElementById('label_respuesta_email');
+        var email = document.getElementById('email');
+        var email_valido = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+        if (email_valido.test(email)) {
+            //error vacio
+            email.style.backgroundImage = "url('images/error-icon.svg')";
+            email.style.backgroundRepeat = 'no-repeat';
+            email.style.backgroundPosition = 'right';
+            email.style.border = '3px solid red';
+            respuesta_email.style.display = 'block';
+            return;
+        } else {
+            email.style.backgroundImage = "url('images/success-icon.svg')";
+            email.style.backgroundRepeat = 'no-repeat';
+            email.style.backgroundPosition = 'right';
+            email.style.border = '3px solid green';
+            respuesta_email.style.display = 'none';
+        }
 
-}
+    }
 
     function validarCamposVacios() {
         //Declaracion variables id label
-        var respuesta_nombre = document.getElementById('label_respuesta_nombre');
-        var respuesta_clave = document.getElementById('label_respuesta_clave');
+        let inputs2 = Array.prototype.slice.call(inputs)
+        inputs2.forEach(input => {
+            validar(input);
+        })
+    }
+    function validar(campo) {
+        var clave = document.getElementById('clave');
+        var confir_clave = document.getElementById('confir_clave');
         var respuesta_clave_longitud = document.getElementById('label_respuesta_clave_longitud');
-        var respuesta_confir_clave = document.getElementById('label_respuesta_confir_clave');
-        var respuesta_clave_no_coincide = document.getElementById('label_respuesta_clave_no_coincide');
+        var respuesta_clave_no_coincide = document.getElementById('label_respuesta_clave_no_coinciden');
 
-       /* if (nombre.value.length == 0) {
-            //error vacio
-            nombre.style.backgroundImage = "url('images/error-icon.svg')";
-            nombre.style.backgroundRepeat = 'no-repeat';
-            nombre.style.backgroundPosition = 'right';
-            nombre.style.border = '3px solid red';
-            respuesta_nombre.style.display = 'block';
-            return;
+        if (campo.value) {
+            //si existe nombnre OK. si existe password tengo que validar:
+            //1:que tenga al menos 8 caracteres y que password y confirm_password sean iguales.
+
+         //   if(clave.value.length != 0 || confir_clave.value.length != 0 ){}
+                if ( (clave.value.length >= 8 && confir_clave.value.length >= 8) && (clave.value == confir_clave.value) ) {
+                    campo.style.backgroundImage = "url('images/success-icon.svg')";
+                    campo.style.backgroundRepeat = 'no-repeat';
+                    campo.style.backgroundPosition = 'right';
+                    campo.style.border = '3px solid green';
+                    document.getElementById('label_respuesta_' + campo.id).style.display = 'none';
+                    respuesta_clave_longitud.style.display = 'none';
+                    respuesta_clave_no_coincide.style.display = 'none';
+                }else{
+                    respuesta_clave_longitud.style.display = 'block';
+                    respuesta_clave_no_coincide.style.display = 'block';
+
+                    confir_clave.style.backgroundImage =  "url('images/error-icon.svg')";
+                    confir_clave.style.backgroundRepeat = 'no-repeat';
+                    confir_clave.style.backgroundPosition = 'right';
+                    confir_clave.style.border = '3px solid red';
+
+                    clave.style.backgroundImage = "url('images/error-icon.svg')";
+                    clave.style.backgroundRepeat = 'no-repeat';
+                    clave.style.backgroundPosition = 'right';
+                    clave.style.border = '3px solid red';
+                }
+
+
         } else {
-            nombre.style.backgroundImage = "url('images/success-icon.svg')";
-            nombre.style.backgroundRepeat = 'no-repeat';
-            nombre.style.backgroundPosition = 'right';
-            nombre.style.border = '3px solid green';
-            respuesta_nombre.style.display = 'none';
-        }*/
-
-        validarEmail();
-      /*  if (clave.value.length == 0) {
-            //error vacio
-            clave.style.backgroundImage = "url('images/error-icon.svg')";
-            clave.style.backgroundRepeat = 'no-repeat';
-            clave.style.backgroundPosition = 'right';
-            clave.style.border = '3px solid red';
-            respuesta_clave.style.display = 'block';
-            return;
-        } else if (clave.value.length < 8){
-            clave.style.backgroundImage = "url('images/error-icon.svg')";
-            clave.style.backgroundRepeat = 'no-repeat';
-            clave.style.backgroundPosition = 'right';
-            clave.style.border = '3px solid red';
-            respuesta_clave_longitud.style.display = 'block';
-        }else{
-            clave.style.backgroundImage = "url('images/success-icon.svg')";
-            clave.style.backgroundRepeat = 'no-repeat';
-            clave.style.backgroundPosition = 'right';
-            clave.style.border = '3px solid green';
-            respuesta_clave.style.display = 'none';
-            respuesta_clave_longitud.style.display = 'none';
-        }*/
+            //si esta vacio
+            if(clave.value.length == 0 || confir_clave.value.length == 0) {
+                respuesta_clave_longitud.style.display = 'block';
+            }
+            document.getElementById('label_respuesta_' + campo.id).style.display = 'block';
+            campo.style.backgroundImage = "url('images/error-icon.svg')";
+            campo.style.backgroundRepeat = 'no-repeat';
+            campo.style.backgroundPosition = 'right';
+            campo.style.border = '3px solid red';
+        }
 
     }
